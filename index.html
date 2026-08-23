@@ -6,7 +6,7 @@
 
 <title>NTS Surveillance Technologies | Complete Security Solutions</title>
 
-<meta name="description" content="NTS Surveillance Technologies provides complete CCTV, security, surveillance, AMC, networking, solar CCTV, billing machines and barcode scanner solutions in Tirupati.">
+<meta name="description" content="NTS Surveillance Technologies - Complete security solutions for homes, businesses and industries in Tirupati. CCTV, AMC, solar CCTV, Wi-Fi networking, burglar alarms, billing machines and barcode scanners.">
 
 <style>
 *{
@@ -18,20 +18,19 @@
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-    background:#ffffff;
+    background:#f7f9fc;
     color:#101b35;
     line-height:1.6;
 }
 
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-.container{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
+:root{
+    --blue:#071a3d;
+    --blue2:#0b2d63;
+    --red:#d71920;
+    --red2:#ff3038;
+    --white:#ffffff;
+    --light:#eef3f9;
+    --dark:#071326;
 }
 
 /* HEADER */
@@ -41,79 +40,101 @@ header{
     top:0;
     z-index:1000;
     background:rgba(255,255,255,0.97);
-    border-bottom:1px solid #e7eaf0;
-    box-shadow:0 4px 20px rgba(0,0,0,0.06);
+    backdrop-filter:blur(10px);
+    box-shadow:0 3px 20px rgba(0,0,0,0.10);
 }
 
 .navbar{
-    min-height:82px;
+    max-width:1250px;
+    margin:auto;
+    padding:13px 25px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:30px;
+    gap:25px;
 }
 
 .logo{
     display:flex;
     align-items:center;
     gap:12px;
+    text-decoration:none;
 }
 
-.logo-mark{
-    width:54px;
-    height:54px;
+.logo-eye{
+    width:55px;
+    height:34px;
+    border-radius:55% 10%;
+    transform:rotate(-2deg);
+    border:5px solid var(--blue);
+    position:relative;
+    background:white;
+    overflow:hidden;
+}
+
+.logo-eye:before{
+    content:"";
+    position:absolute;
+    width:20px;
+    height:20px;
     border-radius:50%;
-    background:linear-gradient(135deg,#071d46,#123e78);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#fff;
-    font-size:20px;
-    font-weight:900;
-    border:3px solid #e00012;
-    box-shadow:0 5px 15px rgba(0,0,0,0.18);
+    background:radial-gradient(circle at 35% 30%,#fff 0 5%,#000 7% 48%,#d71920 50% 63%,#071a3d 65%);
+    left:13px;
+    top:2px;
+}
+
+.logo-eye:after{
+    content:"";
+    position:absolute;
+    width:65px;
+    height:8px;
+    background:var(--red);
+    top:-5px;
+    left:-4px;
+    transform:rotate(-8deg);
 }
 
 .logo-text strong{
     display:block;
-    font-size:21px;
-    letter-spacing:1px;
-    color:#071d46;
+    font-size:24px;
+    letter-spacing:2px;
+    color:var(--blue);
 }
 
 .logo-text span{
+    display:block;
     font-size:10px;
-    font-weight:bold;
     letter-spacing:3px;
-    color:#d80012;
+    color:var(--red);
 }
 
-.nav-links{
+nav{
     display:flex;
     align-items:center;
-    gap:28px;
+    gap:25px;
 }
 
-.nav-links a{
-    font-size:14px;
+nav a{
+    text-decoration:none;
+    color:var(--blue);
     font-weight:700;
-    color:#17233e;
-    transition:.3s;
+    font-size:14px;
+    transition:.25s;
 }
 
-.nav-links a:hover{
-    color:#d80012;
+nav a:hover{
+    color:var(--red);
 }
 
 .nav-btn{
-    padding:12px 20px;
-    background:#d80012;
-    color:#fff !important;
+    background:linear-gradient(135deg,var(--red),#9e0007);
+    color:white !important;
+    padding:11px 19px;
     border-radius:7px;
-    box-shadow:0 6px 15px rgba(216,0,18,.2);
+    box-shadow:0 5px 15px rgba(215,25,32,.25);
 }
 
-.menu-btn{
+.menu{
     display:none;
     font-size:28px;
     cursor:pointer;
@@ -128,238 +149,228 @@ header{
     position:relative;
     overflow:hidden;
     background:
-        radial-gradient(circle at 85% 30%,rgba(213,0,18,.18),transparent 28%),
-        radial-gradient(circle at 10% 80%,rgba(18,62,120,.18),transparent 30%),
-        linear-gradient(135deg,#061633,#0a2857 55%,#07172f);
-    color:#fff;
+    radial-gradient(circle at 80% 30%,rgba(215,25,32,.18),transparent 28%),
+    radial-gradient(circle at 20% 70%,rgba(0,75,160,.22),transparent 35%),
+    linear-gradient(135deg,#03132f,#092b63 55%,#071a3d);
+    color:white;
+}
+
+.hero:before{
+    content:"";
+    position:absolute;
+    width:650px;
+    height:650px;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:50%;
+    right:-180px;
+    top:-100px;
 }
 
 .hero:after{
     content:"";
     position:absolute;
-    width:600px;
-    height:600px;
-    right:-250px;
-    top:-180px;
-    border:2px solid rgba(255,255,255,.08);
+    width:420px;
+    height:420px;
+    border:1px solid rgba(255,255,255,.07);
     border-radius:50%;
+    right:20px;
+    top:40px;
 }
 
 .hero-content{
+    width:min(1200px,92%);
+    margin:auto;
     position:relative;
     z-index:2;
-    max-width:760px;
 }
 
 .badge{
     display:inline-block;
-    padding:9px 18px;
     border:1px solid rgba(255,255,255,.3);
+    background:rgba(255,255,255,.08);
+    padding:8px 17px;
     border-radius:30px;
-    font-size:12px;
+    font-size:13px;
     font-weight:bold;
     letter-spacing:1px;
     margin-bottom:22px;
-    background:rgba(255,255,255,.06);
 }
 
-.badge b{
-    color:#ff2638;
+.badge span{
+    color:#ff4148;
 }
 
 .hero h1{
-    font-size:clamp(42px,6vw,78px);
+    font-size:clamp(42px,6vw,76px);
     line-height:1.02;
+    max-width:850px;
     letter-spacing:-2px;
-    margin-bottom:20px;
 }
 
-.hero h1 span{
-    color:#ed1527;
+.hero h1 .red{
+    color:#ff343b;
 }
 
-.hero-sub{
-    font-size:21px;
-    color:#dce5f5;
-    margin-bottom:12px;
-    font-weight:600;
-}
-
-.hero-tagline{
-    font-size:15px;
-    letter-spacing:3px;
-    color:#fff;
-    margin-bottom:34px;
+.hero p{
+    max-width:680px;
+    margin:25px 0;
+    font-size:18px;
+    color:#dce6f7;
 }
 
 .hero-buttons{
     display:flex;
-    gap:15px;
     flex-wrap:wrap;
+    gap:14px;
 }
 
 .btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    padding:14px 25px;
-    border-radius:7px;
+    display:inline-block;
+    text-decoration:none;
+    padding:14px 24px;
+    border-radius:8px;
     font-weight:800;
-    font-size:14px;
-    transition:.3s;
+    transition:.25s;
 }
 
 .btn-red{
-    background:#df0016;
-    color:#fff;
+    background:linear-gradient(135deg,#ff3038,#c40008);
+    color:white;
+    box-shadow:0 10px 25px rgba(215,25,32,.3);
 }
 
-.btn-blue{
-    border:1px solid rgba(255,255,255,.4);
-    color:#fff;
-    background:rgba(255,255,255,.07);
+.btn-white{
+    background:white;
+    color:var(--blue);
 }
 
 .btn:hover{
     transform:translateY(-3px);
 }
 
-/* TRUST BAR */
+/* STATS */
 
-.trust-bar{
-    background:#fff;
+.stats{
+    background:white;
     box-shadow:0 5px 25px rgba(0,0,0,.08);
-    position:relative;
-    z-index:5;
 }
 
-.trust-grid{
+.stats-grid{
+    max-width:1100px;
+    margin:auto;
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(4,1fr);
+}
+
+.stat{
+    padding:28px 15px;
     text-align:center;
+    border-right:1px solid #e5e9ef;
 }
 
-.trust-item{
-    padding:25px 15px;
-    border-right:1px solid #e8e8e8;
+.stat:last-child{
+    border:none;
 }
 
-.trust-item:last-child{
-    border-right:0;
+.stat h3{
+    color:var(--red);
+    font-size:28px;
 }
 
-.trust-item strong{
-    display:block;
-    color:#071d46;
-    font-size:16px;
+.stat p{
+    font-size:13px;
+    color:#667085;
 }
 
-.trust-item span{
-    font-size:12px;
-    color:#707888;
-}
-
-/* SECTION */
+/* COMMON */
 
 section{
-    padding:90px 0;
+    padding:90px 6%;
 }
 
-.section-heading{
+.section-head{
     text-align:center;
-    margin-bottom:50px;
+    max-width:750px;
+    margin:0 auto 50px;
 }
 
-.section-heading .small{
-    color:#d80012;
-    font-size:12px;
+.section-head small{
+    color:var(--red);
     font-weight:800;
-    letter-spacing:3px;
+    letter-spacing:2px;
 }
 
-.section-heading h2{
+.section-head h2{
     font-size:42px;
-    color:#071d46;
+    color:var(--blue);
     margin:8px 0 12px;
 }
 
-.section-heading p{
-    max-width:650px;
-    margin:auto;
-    color:#697386;
+.section-head p{
+    color:#667085;
 }
 
 /* SERVICES */
 
 .services{
-    background:#f7f9fc;
+    background:#fff;
 }
 
-.service-grid{
+.cards{
+    max-width:1200px;
+    margin:auto;
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:20px;
 }
 
-.service-card{
-    background:#fff;
-    border:1px solid #e5e9f0;
-    border-radius:12px;
-    padding:30px 20px;
-    text-align:center;
+.card{
+    background:white;
+    border:1px solid #e4e9f0;
+    border-radius:14px;
+    padding:28px 22px;
     transition:.3s;
-    position:relative;
-    overflow:hidden;
+    box-shadow:0 8px 25px rgba(5,25,60,.05);
 }
 
-.service-card:before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:4px;
-    background:#d80012;
-    transform:scaleX(0);
-    transition:.3s;
-}
-
-.service-card:hover{
+.card:hover{
     transform:translateY(-7px);
-    box-shadow:0 15px 35px rgba(0,0,0,.1);
+    border-color:#d71920;
+    box-shadow:0 15px 35px rgba(5,25,60,.12);
 }
 
-.service-card:hover:before{
-    transform:scaleX(1);
-}
-
-.service-icon{
-    width:60px;
-    height:60px;
-    margin:0 auto 18px;
-    border-radius:50%;
+.icon{
+    width:55px;
+    height:55px;
+    border-radius:13px;
+    background:linear-gradient(135deg,#071a3d,#174d9c);
     display:flex;
     align-items:center;
     justify-content:center;
-    background:#071d46;
-    color:#fff;
+    color:white;
     font-size:25px;
+    margin-bottom:18px;
 }
 
-.service-card h3{
-    font-size:17px;
-    color:#071d46;
+.card h3{
+    color:var(--blue);
     margin-bottom:8px;
 }
 
-.service-card p{
-    font-size:12px;
-    color:#727b8c;
+.card p{
+    color:#667085;
+    font-size:14px;
 }
 
 /* ABOUT */
 
+.about{
+    background:linear-gradient(135deg,#eef4fb,#ffffff);
+}
+
 .about-grid{
+    max-width:1150px;
+    margin:auto;
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:60px;
@@ -367,196 +378,159 @@ section{
 }
 
 .about-box{
-    background:linear-gradient(145deg,#071d46,#123e78);
-    min-height:390px;
+    background:linear-gradient(145deg,#071a3d,#0d3775);
+    color:white;
+    padding:45px;
     border-radius:20px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
     position:relative;
     overflow:hidden;
-    box-shadow:0 20px 50px rgba(7,29,70,.18);
 }
 
-.about-box:before{
+.about-box:after{
     content:"NTS";
     position:absolute;
-    font-size:150px;
+    font-size:180px;
     font-weight:900;
-    color:rgba(255,255,255,.04);
+    opacity:.035;
+    right:-20px;
+    bottom:-40px;
 }
 
-.eye{
-    width:220px;
-    height:130px;
-    border:8px solid #fff;
-    border-radius:80% 10%;
-    transform:rotate(-5deg);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    position:relative;
+.about-box h3{
+    font-size:35px;
+    margin-bottom:15px;
 }
 
-.eye:before{
-    content:"";
-    width:65px;
-    height:65px;
-    border-radius:50%;
-    background:#e00017;
-    border:12px solid #071d46;
-    box-shadow:0 0 0 5px #fff;
-}
-
-.about-content h2{
-    font-size:42px;
-    color:#071d46;
-    margin-bottom:20px;
-}
-
-.about-content p{
-    color:#667085;
+.about-text h2{
+    font-size:40px;
     margin-bottom:18px;
 }
 
-.check-list{
-    list-style:none;
+.about-text p{
+    color:#667085;
+    margin-bottom:16px;
 }
 
-.check-list li{
-    margin:12px 0;
+.check{
+    margin:10px 0;
     font-weight:700;
-    color:#25314a;
 }
 
-.check-list li:before{
-    content:"✓";
-    color:#d80012;
-    font-weight:900;
-    margin-right:10px;
+.check span{
+    color:var(--red);
+    margin-right:8px;
 }
 
 /* PRODUCTS */
 
 .products{
-    background:#f7f9fc;
-}
-
-.product-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
+    background:#fff;
 }
 
 .product-card{
-    background:#fff;
-    padding:28px;
-    border-radius:12px;
-    border:1px solid #e5e9f0;
+    text-align:center;
 }
 
-.product-card h3{
-    color:#071d46;
-    margin-bottom:8px;
-}
-
-.product-card p{
-    font-size:13px;
-    color:#727b8c;
+.product-card .icon{
+    margin:0 auto 18px;
 }
 
 /* AMC */
 
 .amc{
-    background:linear-gradient(135deg,#071d46,#0d356d);
-    color:#fff;
+    background:linear-gradient(135deg,#06152f,#0c2d62);
+    color:white;
 }
 
-.amc .section-heading h2,
-.amc .section-heading p{
-    color:#fff;
+.amc .section-head h2,
+.amc .section-head p{
+    color:white;
 }
 
 .amc-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
-}
-
-.amc-card{
-    border:1px solid rgba(255,255,255,.2);
-    background:rgba(255,255,255,.07);
-    padding:25px;
-    border-radius:10px;
-}
-
-.amc-card strong{
-    display:block;
-    margin-bottom:8px;
-}
-
-.amc-card span{
-    font-size:12px;
-    color:#cbd7e9;
-}
-
-/* WHY */
-
-.why-grid{
+    max-width:1050px;
+    margin:auto;
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:22px;
 }
 
-.why-card{
+.amc-card{
     padding:30px;
-    border-left:4px solid #d80012;
-    background:#f8f9fb;
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:15px;
+    background:rgba(255,255,255,.06);
 }
 
-.why-card h3{
-    color:#071d46;
-    margin-bottom:7px;
+.amc-card h3{
+    margin-bottom:10px;
 }
 
-.why-card p{
-    color:#707888;
-    font-size:13px;
+.amc-card p{
+    color:#d5dfef;
+    font-size:14px;
+}
+
+/* CTA */
+
+.cta{
+    padding:70px 6%;
+    background:linear-gradient(135deg,#d71920,#870008);
+    color:white;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:43px;
+    margin-bottom:10px;
+}
+
+.cta p{
+    margin-bottom:25px;
 }
 
 /* CONTACT */
 
 .contact{
-    background:#f7f9fc;
+    background:#f5f7fa;
 }
 
 .contact-grid{
+    max-width:1100px;
+    margin:auto;
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:35px;
+    gap:25px;
 }
 
-.contact-box{
-    background:#fff;
-    border-radius:15px;
+.contact-card{
+    background:white;
     padding:35px;
-    border:1px solid #e5e9f0;
-}
-
-.contact-box h3{
-    font-size:25px;
-    color:#071d46;
-    margin-bottom:20px;
+    border-radius:16px;
+    border:1px solid #e2e7ee;
+    box-shadow:0 8px 25px rgba(0,0,0,.05);
 }
 
 .contact-item{
-    margin:18px 0;
+    display:flex;
+    gap:15px;
+    margin:20px 0;
+}
+
+.contact-icon{
+    min-width:43px;
+    height:43px;
+    border-radius:10px;
+    background:#071a3d;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .contact-item strong{
     display:block;
-    color:#071d46;
-    font-size:14px;
+    color:var(--blue);
 }
 
 .contact-item span{
@@ -564,83 +538,82 @@ section{
     font-size:14px;
 }
 
-.contact-buttons{
+.contact-actions{
     display:flex;
-    gap:12px;
     flex-wrap:wrap;
+    gap:12px;
     margin-top:25px;
+}
+
+.whatsapp{
+    background:#19a95a;
+    color:white;
+}
+
+.call{
+    background:var(--red);
+    color:white;
 }
 
 /* FOOTER */
 
 footer{
-    background:#06142d;
-    color:#fff;
-    padding:40px 0 25px;
+    background:#030d20;
+    color:white;
+    padding:45px 6% 20px;
 }
 
 .footer-grid{
+    max-width:1150px;
+    margin:auto;
     display:grid;
     grid-template-columns:2fr 1fr 1fr;
     gap:40px;
-    padding-bottom:30px;
-    border-bottom:1px solid rgba(255,255,255,.12);
 }
 
-.footer-logo{
-    font-size:30px;
-    font-weight:900;
-    letter-spacing:2px;
-}
-
-.footer-logo span{
-    color:#e00017;
-}
-
-footer p{
-    color:#aebbd0;
-    font-size:13px;
-    margin-top:12px;
-}
-
-footer h4{
+footer h3{
     margin-bottom:15px;
 }
 
-footer ul{
-    list-style:none;
-}
-
-footer li{
+footer p,
+footer a{
     color:#aebbd0;
+    text-decoration:none;
+    font-size:14px;
+}
+
+footer a{
+    display:block;
     margin:8px 0;
-    font-size:13px;
 }
 
-.copyright{
+.footer-bottom{
+    max-width:1150px;
+    margin:35px auto 0;
+    padding-top:18px;
+    border-top:1px solid rgba(255,255,255,.1);
     text-align:center;
-    color:#8795aa;
-    font-size:11px;
-    padding-top:22px;
+    color:#8090a8;
+    font-size:12px;
 }
 
-/* WHATSAPP */
+/* FLOATING WHATSAPP */
 
-.whatsapp{
+.float-wa{
     position:fixed;
-    right:22px;
-    bottom:22px;
+    right:20px;
+    bottom:20px;
+    z-index:2000;
     width:58px;
     height:58px;
     border-radius:50%;
-    background:#1ebc5a;
-    color:#fff;
+    background:#1ab35b;
+    color:white;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:25px;
-    font-weight:bold;
-    z-index:999;
+    font-size:26px;
+    text-decoration:none;
     box-shadow:0 8px 25px rgba(0,0,0,.25);
 }
 
@@ -648,33 +621,24 @@ footer li{
 
 @media(max-width:950px){
 
-    .nav-links{
+    nav{
         display:none;
-        position:absolute;
-        top:82px;
-        left:0;
-        right:0;
-        background:#fff;
-        padding:20px;
-        flex-direction:column;
-        align-items:stretch;
-        box-shadow:0 10px 25px rgba(0,0,0,.1);
     }
 
-    .nav-links.active{
-        display:flex;
-    }
-
-    .menu-btn{
+    .menu{
         display:block;
     }
 
-    .service-grid{
+    .cards{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .amc-grid{
+    .stats-grid{
         grid-template-columns:repeat(2,1fr);
+    }
+
+    .stat:nth-child(2){
+        border-right:none;
     }
 
     .about-grid,
@@ -682,34 +646,19 @@ footer li{
         grid-template-columns:1fr;
     }
 
-    .product-grid{
-        grid-template-columns:repeat(2,1fr);
+    .amc-grid{
+        grid-template-columns:1fr;
     }
 
-    .why-grid{
-        grid-template-columns:repeat(2,1fr);
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
     }
 }
 
 @media(max-width:600px){
 
     .navbar{
-        min-height:70px;
-    }
-
-    .logo-mark{
-        width:45px;
-        height:45px;
-        font-size:16px;
-    }
-
-    .logo-text strong{
-        font-size:16px;
-    }
-
-    .logo-text span{
-        font-size:7px;
-        letter-spacing:2px;
+        padding:12px 15px;
     }
 
     .hero{
@@ -717,45 +666,39 @@ footer li{
     }
 
     .hero h1{
-        font-size:43px;
+        font-size:46px;
     }
 
-    .hero-sub{
-        font-size:17px;
-    }
-
-    .hero-tagline{
-        font-size:11px;
-        letter-spacing:2px;
+    .hero p{
+        font-size:16px;
     }
 
     section{
-        padding:65px 0;
+        padding:65px 5%;
     }
 
-    .section-heading h2,
-    .about-content h2{
-        font-size:32px;
+    .section-head h2{
+        font-size:34px;
     }
 
-    .trust-grid{
+    .cards{
         grid-template-columns:1fr;
     }
 
-    .trust-item{
-        border-right:0;
-        border-bottom:1px solid #e8e8e8;
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
     }
 
-    .service-grid,
-    .product-grid,
-    .amc-grid,
-    .why-grid{
-        grid-template-columns:1fr;
+    .stat{
+        border-bottom:1px solid #e5e9ef;
     }
 
     .about-box{
-        min-height:300px;
+        padding:30px;
+    }
+
+    .cta h2{
+        font-size:34px;
     }
 
     .footer-grid{
@@ -767,446 +710,596 @@ footer li{
 
 <body>
 
+<!-- HEADER -->
+
 <header>
-<div class="container navbar">
+<div class="navbar">
 
 <a href="#home" class="logo">
-<div class="logo-mark">NTS</div>
-<div class="logo-text">
-<strong>NTS</strong>
-<span>SURVEILLANCE TECHNOLOGIES</span>
-</div>
+    <div class="logo-eye"></div>
+    <div class="logo-text">
+        <strong>NTS</strong>
+        <span>SURVEILLANCE TECHNOLOGIES</span>
+    </div>
 </a>
 
-<div class="menu-btn" onclick="toggleMenu()">☰</div>
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#products">Products</a>
+    <a href="#amc">AMC</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="nav-btn">Get Quote</a>
+</nav>
 
-<nav class="nav-links" id="navLinks">
+<div class="menu">☰</div>
+
+</div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="badge">
+    <span>✓</span> AUTHORIZED SALES & SERVICE
+</div>
+
+<h1>
+    COMPLETE <span class="red">SECURITY</span><br>
+    SOLUTIONS
+</h1>
+
+<p>
+    Complete security solutions for
+    <strong>Home | Business | Industry</strong>.
+    From CCTV surveillance and networking to alarms,
+    solar CCTV and smart security systems.
+</p>
+
+<div class="hero-buttons">
+
+<a href="tel:+918008911440" class="btn btn-red">
+    ☎ Call Now
+</a>
+
+<a href="https://wa.me/918008911440?text=Hello%20NTS%20Surveillance%20Technologies,%20I%20need%20a%20security%20solution." class="btn btn-white">
+    WhatsApp Us
+</a>
+
+<a href="#contact" class="btn btn-white">
+    Get a Free Quote
+</a>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- STATS -->
+
+<div class="stats">
+
+<div class="stats-grid">
+
+<div class="stat">
+    <h3>24/7</h3>
+    <p>Security Monitoring</p>
+</div>
+
+<div class="stat">
+    <h3>360°</h3>
+    <p>Security Solutions</p>
+</div>
+
+<div class="stat">
+    <h3>AMC</h3>
+    <p>Maintenance Support</p>
+</div>
+
+<div class="stat">
+    <h3>NTS</h3>
+    <p>Surveillance Technologies</p>
+</div>
+
+</div>
+</div>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+<div class="about-grid">
+
+<div class="about-box">
+
+<h3>NTS Surveillance Technologies</h3>
+
+<p>
+Professional security and surveillance solutions
+for homes, businesses, offices, commercial buildings
+and industries.
+</p>
+
+<br>
+
+<p>
+Our focus is simple:
+<strong>reliable products, professional installation
+and dependable after-sales service.</strong>
+</p>
+
+</div>
+
+<div class="about-text">
+
+<small style="color:#d71920;font-weight:800;letter-spacing:2px;">
+ABOUT NTS
+</small>
+
+<h2>Security You Can Trust.</h2>
+
+<p>
+NTS Surveillance Technologies provides complete
+security and technology solutions designed around
+your actual requirements.
+</p>
+
+<p>
+From selecting the right CCTV system to installation,
+networking, maintenance and AMC support, our team
+handles the complete solution.
+</p>
+
+<div class="check">
+<span>✓</span> Professional Installation
+</div>
+
+<div class="check">
+<span>✓</span> Quality Security Products
+</div>
+
+<div class="check">
+<span>✓</span> AMC & Maintenance Support
+</div>
+
+<div class="check">
+<span>✓</span> Home, Business & Industrial Solutions
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+<div class="section-head">
+
+<small>OUR SERVICES</small>
+
+<h2>Complete Security Services</h2>
+
+<p>
+Everything you need to protect your property,
+people and business infrastructure.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">📹</div>
+<h3>CCTV Installation</h3>
+<p>
+Professional CCTV installation for homes,
+shops, offices and commercial buildings.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🔧</div>
+<h3>CCTV AMC</h3>
+<p>
+Preventive maintenance, troubleshooting and
+reliable after-sales support.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🚨</div>
+<h3>Burglar Alarm</h3>
+<p>
+Security alarm solutions designed to protect
+your property from unauthorized access.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">📡</div>
+<h3>Wi-Fi Networking</h3>
+<p>
+Reliable Wi-Fi and networking solutions for
+homes, offices and businesses.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">☀️</div>
+<h3>Solar CCTV</h3>
+<p>
+Solar-powered surveillance solutions for farms,
+remote locations and areas without reliable power.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🏢</div>
+<h3>Commercial Security</h3>
+<p>
+Complete surveillance solutions for shops,
+offices, warehouses and commercial buildings.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🛠️</div>
+<h3>System Upgrades</h3>
+<p>
+Upgrade existing CCTV systems, storage,
+networking and surveillance infrastructure.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🔒</div>
+<h3>Security Solutions</h3>
+<p>
+Customized security solutions based on your
+property, budget and requirements.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section class="products" id="products">
+
+<div class="section-head">
+
+<small>OUR PRODUCTS</small>
+
+<h2>Security & Business Technology</h2>
+
+<p>
+Quality products for surveillance, security
+and business operations.
+</p>
+
+</div>
+
+<div class="cards">
+
+<div class="card product-card">
+<div class="icon">📷</div>
+<h3>CCTV Cameras</h3>
+<p>Indoor, outdoor, night vision and advanced surveillance cameras.</p>
+</div>
+
+<div class="card product-card">
+<div class="icon">💾</div>
+<h3>DVR / NVR</h3>
+<p>Reliable video recording and surveillance storage solutions.</p>
+</div>
+
+<div class="card product-card">
+<div class="icon">🖥️</div>
+<h3>Monitors</h3>
+<p>Display solutions for professional CCTV monitoring.</p>
+</div>
+
+<div class="card product-card">
+<div class="icon">🧾</div>
+<h3>Billing Machines</h3>
+<p>Billing solutions for shops, retail stores and businesses.</p>
+</div>
+
+<div class="card product-card">
+<div class="icon">🏷️</div>
+<h3>Barcode Scanners</h3>
+<p>Fast and reliable barcode scanning solutions for businesses.</p>
+</div>
+
+<div class="card product-card">
+<div class="icon">🔋</div>
+<h3>Solar CCTV Systems</h3>
+<p>Remote surveillance systems powered by solar energy.</p>
+</div>
+
+<div class="card product-card">
+<div class="icon">📶</div>
+<h3>Networking</h3>
+<p>Wi-Fi, routers, switches and complete networking solutions.</p>
+</div>
+
+<div class="card product-card">
+<div class="icon">🚨</div>
+<h3>Burglar Alarm Systems</h3>
+<p>Security alarm systems for homes and commercial properties.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- AMC -->
+
+<section class="amc" id="amc">
+
+<div class="section-head">
+
+<small>AMC & MAINTENANCE</small>
+
+<h2>Keep Your Security Working.</h2>
+
+<p>
+Regular maintenance helps your CCTV and security
+systems perform when you need them most.
+</p>
+
+</div>
+
+<div class="amc-grid">
+
+<div class="amc-card">
+<h3>🔍 Preventive Maintenance</h3>
+<p>
+Regular inspection of cameras, DVR/NVR,
+storage, cables, power supplies and networking.
+</p>
+</div>
+
+<div class="amc-card">
+<h3>🔧 Troubleshooting</h3>
+<p>
+Technical support for CCTV, recording,
+networking and connectivity issues.
+</p>
+</div>
+
+<div class="amc-card">
+<h3>🛡️ AMC Support</h3>
+<p>
+Planned maintenance and service support
+for existing security installations.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<h2>Need a Security Solution?</h2>
+
+<p>
+Tell us what you need. Our team can help you choose
+the right solution for your property.
+</p>
+
+<a href="#contact" class="btn btn-white">
+REQUEST A FREE QUOTATION
+</a>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+<div class="section-head">
+
+<small>CONTACT NTS</small>
+
+<h2>Let's Secure Your Space</h2>
+
+<p>
+Talk to our team for CCTV, security, networking
+and business technology requirements.
+</p>
+
+</div>
+
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<h2>NTS Surveillance Technologies</h2>
+
+<div class="contact-item">
+<div class="contact-icon">☎</div>
+<div>
+<strong>Phone</strong>
+<span>
+8008911440<br>
+9581111379
+</span>
+</div>
+</div>
+
+<div class="contact-item">
+<div class="contact-icon">📍</div>
+<div>
+<strong>Address</strong>
+<span>
+19-8-36, Hathiramji Colony,<br>
+Bairagi Pattedda, Tirupati,<br>
+Andhra Pradesh – 517501
+</span>
+</div>
+</div>
+
+<div class="contact-item">
+<div class="contact-icon">✉</div>
+<div>
+<strong>Email</strong>
+<span>
+ntssurveillancetechnologies@gmail.com
+</span>
+</div>
+</div>
+
+<div class="contact-item">
+<div class="contact-icon">GST</div>
+<div>
+<strong>GSTIN</strong>
+<span>
+37HFYPK2319A1Z9
+</span>
+</div>
+</div>
+
+<div class="contact-actions">
+
+<a href="tel:+918008911440" class="btn call">
+☎ CALL NOW
+</a>
+
+<a href="https://wa.me/918008911440?text=Hello%20NTS%20Surveillance%20Technologies,%20I%20need%20a%20quotation." class="btn whatsapp">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+
+
+<div class="contact-card">
+
+<h2>Get a Free Quote</h2>
+
+<p style="color:#667085;margin:12px 0 25px;">
+Tell us what you need and our team can discuss
+the right security solution for your property.
+</p>
+
+<div class="check">
+<span>✓</span> CCTV Installation
+</div>
+
+<div class="check">
+<span>✓</span> AMC & Maintenance
+</div>
+
+<div class="check">
+<span>✓</span> Security Solutions
+</div>
+
+<div class="check">
+<span>✓</span> Solar CCTV Systems
+</div>
+
+<div class="check">
+<span>✓</span> Wi-Fi Networking
+</div>
+
+<div class="check">
+<span>✓</span> Billing Machines & Barcode Scanners
+</div>
+
+<br>
+
+<a href="https://wa.me/918008911440?text=Hello%20NTS%20Surveillance%20Technologies,%20I%20would%20like%20a%20free%20quotation." class="btn btn-red">
+REQUEST QUOTATION
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+<h3>NTS Surveillance Technologies</h3>
+
+<p>
+Complete security solutions for
+Home | Business | Industry.
+</p>
+
+<br>
+
+<p>
+Never Blink. Always Watching.
+</p>
+</div>
+
+<div>
+<h3>Quick Links</h3>
+
 <a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#products">Products</a>
 <a href="#amc">AMC</a>
 <a href="#contact">Contact</a>
-<a href="#contact" class="nav-btn">Get Quote</a>
-</nav>
-
-</div>
-</header>
-
-
-<main>
-
-<section class="hero" id="home">
-<div class="container">
-<div class="hero-content">
-
-<div class="badge">🛡 <b>AUTHORIZED SALES & SERVICE</b></div>
-
-<h1>
-COMPLETE<br>
-<span>SECURITY</span><br>
-SOLUTIONS
-</h1>
-
-<div class="hero-sub">
-FOR HOME | BUSINESS | INDUSTRY
-</div>
-
-<div class="hero-tagline">
-NEVER BLINK. ALWAYS WATCHING.
-</div>
-
-<div class="hero-buttons">
-<a href="tel:+918008911440" class="btn btn-red">📞 CALL NOW</a>
-<a href="https://wa.me/918008911440?text=Hello%20NTS%20Surveillance%20Technologies%2C%20I%20need%20security%20solutions." class="btn btn-blue" target="_blank">💬 WHATSAPP US</a>
-<a href="#contact" class="btn btn-blue">GET A FREE QUOTE</a>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<div class="trust-bar">
-<div class="container trust-grid">
-
-<div class="trust-item">
-<strong>Professional Installation</strong>
-<span>Expert CCTV & Security Installation</span>
-</div>
-
-<div class="trust-item">
-<strong>AMC & Maintenance</strong>
-<span>Reliable after-sales technical support</span>
-</div>
-
-<div class="trust-item">
-<strong>Complete Security Solutions</strong>
-<span>Home • Business • Industry</span>
-</div>
-
-</div>
-</div>
-
-
-<section class="services" id="services">
-<div class="container">
-
-<div class="section-heading">
-<div class="small">WHAT WE DO</div>
-<h2>Our Security Solutions</h2>
-<p>Professional security and technology solutions designed for homes, businesses and industries.</p>
-</div>
-
-<div class="service-grid">
-
-<div class="service-card">
-<div class="service-icon">📹</div>
-<h3>CCTV Sales & Service</h3>
-<p>Quality surveillance cameras and reliable technical support.</p>
-</div>
-
-<div class="service-card">
-<div class="service-icon">🔧</div>
-<h3>CCTV Installation</h3>
-<p>Professional installation and system configuration.</p>
-</div>
-
-<div class="service-card">
-<div class="service-icon">🔄</div>
-<h3>AMC & Maintenance</h3>
-<p>Preventive maintenance and technical support for CCTV systems.</p>
-</div>
-
-<div class="service-card">
-<div class="service-icon">🚨</div>
-<h3>Burglar Alarm Systems</h3>
-<p>Security alarm solutions for homes and commercial spaces.</p>
-</div>
-
-<div class="service-card">
-<div class="service-icon">📡</div>
-<h3>Wi-Fi & Networking</h3>
-<p>Reliable networking and connectivity solutions.</p>
-</div>
-
-<div class="service-card">
-<div class="service-icon">☀️</div>
-<h3>Solar CCTV Systems</h3>
-<p>Remote surveillance solutions for locations without reliable power.</p>
-</div>
-
-<div class="service-card">
-<div class="service-icon">🧾</div>
-<h3>Billing Machines</h3>
-<p>Billing solutions for retail stores and businesses.</p>
-</div>
-
-<div class="service-card">
-<div class="service-icon">🔍</div>
-<h3>Barcode Scanners</h3>
-<p>Efficient barcode scanning solutions for business operations.</p>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<section id="about">
-<div class="container about-grid">
-
-<div class="about-box">
-<div class="eye"></div>
-</div>
-
-<div class="about-content">
-<div class="section-heading" style="text-align:left;margin-bottom:20px;">
-<div class="small">ABOUT NTS</div>
-<h2>Security You Can Rely On.</h2>
-</div>
-
-<p>
-NTS Surveillance Technologies provides complete security and surveillance solutions for homes, businesses and industries.
-</p>
-
-<p>
-From CCTV sales and professional installation to AMC, networking, solar CCTV and security systems, we help customers build dependable security solutions.
-</p>
-
-<ul class="check-list">
-<li>Professional Installation</li>
-<li>Quality Security Products</li>
-<li>Reliable Service Support</li>
-<li>Customized Security Solutions</li>
-<li>AMC & Maintenance Support</li>
-</ul>
-
-</div>
-</div>
-</section>
-
-
-<section class="products" id="products">
-<div class="container">
-
-<div class="section-heading">
-<div class="small">OUR PRODUCTS</div>
-<h2>Security & Business Technology</h2>
-<p>Solutions selected to meet residential, commercial and industrial requirements.</p>
-</div>
-
-<div class="product-grid">
-
-<div class="product-card">
-<h3>📹 CCTV Cameras</h3>
-<p>Indoor, outdoor and advanced surveillance camera solutions.</p>
-</div>
-
-<div class="product-card">
-<h3>💾 DVR / NVR</h3>
-<p>Reliable recording and surveillance management systems.</p>
-</div>
-
-<div class="product-card">
-<h3>💽 Surveillance HDD</h3>
-<p>Storage solutions designed for continuous CCTV recording.</p>
-</div>
-
-<div class="product-card">
-<h3>📡 Networking Products</h3>
-<p>Network connectivity solutions for CCTV and business environments.</p>
-</div>
-
-<div class="product-card">
-<h3>☀️ Solar CCTV</h3>
-<p>Power-efficient surveillance solutions for remote locations.</p>
-</div>
-
-<div class="product-card">
-<h3>🧾 Billing & Barcode</h3>
-<p>Billing machines and barcode scanners for retail operations.</p>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<section class="amc" id="amc">
-<div class="container">
-
-<div class="section-heading">
-<div class="small">NTS SUPPORT</div>
-<h2>AMC & Maintenance</h2>
-<p>Keep your security system running reliably with professional maintenance support.</p>
-</div>
-
-<div class="amc-grid">
-
-<div class="amc-card">
-<strong>Camera Health Check</strong>
-<span>Inspection of camera performance and connectivity.</span>
-</div>
-
-<div class="amc-card">
-<strong>DVR / NVR Check</strong>
-<span>System health and recording verification.</span>
-</div>
-
-<div class="amc-card">
-<strong>Storage Check</strong>
-<span>HDD and recording-storage health inspection.</span>
-</div>
-
-<div class="amc-card">
-<strong>Remote Support</strong>
-<span>Technical assistance for supported remote systems.</span>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<section>
-<div class="container">
-
-<div class="section-heading">
-<div class="small">WHY NTS</div>
-<h2>Why Choose Us?</h2>
-<p>We focus on dependable products, professional installation and long-term support.</p>
-</div>
-
-<div class="why-grid">
-
-<div class="why-card">
-<h3>Professional Installation</h3>
-<p>Proper camera positioning, configuration and system setup.</p>
-</div>
-
-<div class="why-card">
-<h3>Quality Solutions</h3>
-<p>Security solutions selected according to your actual requirements.</p>
-</div>
-
-<div class="why-card">
-<h3>Reliable Service</h3>
-<p>Technical assistance for installation and maintenance requirements.</p>
-</div>
-
-<div class="why-card">
-<h3>AMC Support</h3>
-<p>Maintenance solutions designed to keep systems operational.</p>
-</div>
-
-<div class="why-card">
-<h3>Customized Solutions</h3>
-<p>Security planning based on property size, usage and budget.</p>
-</div>
-
-<div class="why-card">
-<h3>Complete Solutions</h3>
-<p>One destination for CCTV, security and related business technology.</p>
-</div>
-
-</div>
-</div>
-</section>
-
-
-<section class="contact" id="contact">
-<div class="container">
-
-<div class="section-heading">
-<div class="small">CONTACT NTS</div>
-<h2>Let's Secure Your Space</h2>
-<p>Talk to our team for CCTV, security, networking and business technology requirements.</p>
-</div>
-
-<div class="contact-grid">
-
-<div class="contact-box">
-<h3>NTS Surveillance Technologies</h3>
-
-<div class="contact-item">
-<strong>📞 Phone</strong>
-<span>8008911440</span><br>
-<span>9581111379</span>
-</div>
-
-<div class="contact-item">
-<strong>📍 Address</strong>
-<span>19-8-36, Hathiramji Colony, Bairagi Patteda, Tirupati, Andhra Pradesh – 517501</span>
-</div>
-
-<div class="contact-item">
-<strong>GSTIN</strong>
-<span>37HFYPK2319A1Z9</span>
-</div>
-
-<div class="contact-buttons">
-<a href="tel:+918008911440" class="btn btn-red">CALL NOW</a>
-<a href="https://wa.me/918008911440?text=Hello%20NTS%20Surveillance%20Technologies%2C%20I%20need%20security%20solutions." class="btn" style="background:#1ebc5a;color:#fff;" target="_blank">WHATSAPP</a>
-</div>
-
-</div>
-
-<div class="contact-box">
-<h3>Get a Free Quote</h3>
-
-<p style="color:#687386;margin-bottom:20px;">
-Tell us what you need and our team can discuss the right security solution for your property.
-</p>
-
-<div class="contact-item">
-<strong>CCTV Installation</strong>
-<span>Homes • Shops • Offices • Commercial Buildings</span>
-</div>
-
-<div class="contact-item">
-<strong>AMC & Maintenance</strong>
-<span>Keep your existing CCTV system maintained.</span>
-</div>
-
-<div class="contact-item">
-<strong>Security Solutions</strong>
-<span>Complete solutions for Home • Business • Industry.</span>
-</div>
-
-<a href="https://wa.me/918008911440?text=Hello%20NTS%20Surveillance%20Technologies%2C%20I%20would%20like%20a%20free%20quotation." class="btn btn-red" target="_blank">REQUEST QUOTATION</a>
-
-</div>
-
-</div>
-</div>
-</section>
-
-</main>
-
-
-<footer>
-<div class="container">
-
-<div class="footer-grid">
-
-<div>
-<div class="footer-logo">N<span>TS</span></div>
-<p>
-NTS Surveillance Technologies<br>
-Complete Security Solutions<br>
-For Home | Business | Industry
-</p>
 </div>
 
 <div>
-<h4>Quick Links</h4>
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#products">Products</a></li>
-</ul>
-</div>
+<h3>Contact</h3>
 
-<div>
-<h4>Contact</h4>
-<ul>
-<li>8008911440</li>
-<li>9581111379</li>
-<li>Tirupati, Andhra Pradesh</li>
-</ul>
+<p>8008911440</p>
+<p>9581111379</p>
+<p>Tirupati, Andhra Pradesh</p>
+<p>517501</p>
 </div>
 
 </div>
 
-<div class="copyright">
+<div class="footer-bottom">
 © 2026 NTS Surveillance Technologies. All Rights Reserved.
 </div>
 
-</div>
 </footer>
 
 
-<a class="whatsapp"
-href="https://wa.me/918008911440?text=Hello%20NTS%20Surveillance%20Technologies%2C%20I%20need%20security%20solutions."
-target="_blank"
+<!-- FLOATING WHATSAPP -->
+
+<a class="float-wa"
+href="https://wa.me/918008911440?text=Hello%20NTS%20Surveillance%20Technologies,%20I%20need%20a%20security%20solution."
 title="WhatsApp NTS">
-W
+☘
 </a>
-
-
-<script>
-function toggleMenu(){
-    document.getElementById("navLinks").classList.toggle("active");
-}
-
-document.querySelectorAll(".nav-links a").forEach(function(link){
-    link.addEventListener("click",function(){
-        document.getElementById("navLinks").classList.remove("active");
-    });
-});
-</script>
 
 </body>
 </html>
