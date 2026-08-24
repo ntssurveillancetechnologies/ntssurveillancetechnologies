@@ -628,7 +628,25 @@ footer a{
     .menu{
         display:block;
     }
+nav.active{
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    top:100%;
+    right:15px;
+    background:#ffffff;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+    z-index:9999;
+}
 
+nav.active a{
+    display:block;
+    padding:12px 20px;
+    color:#071a3d;
+    text-decoration:none;
+}
     .cards{
         grid-template-columns:repeat(2,1fr);
     }
@@ -1298,6 +1316,17 @@ href="https://wa.me/918008911440?text=Hello%20NTS%20Surveillance%20Technologies,
 title="WhatsApp NTS">
 ☘
 </a>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const menu = document.querySelector(".menu");
+  const nav = document.querySelector("nav");
 
+  if (menu && nav) {
+    menu.addEventListener("click", function () {
+      nav.classList.toggle("active");
+    });
+  }
+});
+</script>
 </body>
 </html>
