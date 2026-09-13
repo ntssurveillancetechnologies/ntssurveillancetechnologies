@@ -209,37 +209,42 @@ header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(255,255,255,0.97);
+    background:rgba(255,255,255,0.98);
     backdrop-filter:blur(10px);
     box-shadow:0 3px 20px rgba(0,0,0,0.10);
 }
 
 .navbar{
-    max-width:1250px;
+    max-width:1320px;
     margin:auto;
-    padding:13px 25px;
+    min-height:92px;
+    padding:8px 25px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:25px;
+    gap:18px;
 }
 
 .logo{
     display:flex;
     align-items:center;
     text-decoration:none;
+    flex-shrink:0;
 }
 
 .logo img{
-    width:180px;
-    height:105px;
+    width:155px;
+    height:76px;
     object-fit:contain;
+    display:block;
 }
 
 nav{
     display:flex;
     align-items:center;
-    gap:25px;
+    justify-content:center;
+    gap:20px;
+    flex:1;
 }
 
 nav a{
@@ -247,6 +252,7 @@ nav a{
     color:var(--blue);
     font-weight:700;
     font-size:14px;
+    white-space:nowrap;
     transition:.25s;
 }
 
@@ -261,10 +267,35 @@ nav a:hover{
     border-radius:8px;
 }
 
+.header-phone{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:7px;
+    background:var(--blue);
+    color:white;
+    text-decoration:none;
+    padding:10px 14px;
+    border-radius:8px;
+    font-weight:800;
+    font-size:14px;
+    white-space:nowrap;
+    box-shadow:0 5px 15px rgba(7,26,61,.18);
+}
+
+.header-phone:hover{
+    background:var(--red);
+}
+
+.header-phone-icon{
+    font-size:17px;
+}
+
 .menu{
     display:none;
     font-size:28px;
     cursor:pointer;
+    color:var(--blue);
 }
 
 
@@ -770,6 +801,48 @@ section{
     color:white;
 }
 
+.whatsapp-icon{
+    width:18px;
+    height:18px;
+    vertical-align:-4px;
+    margin-right:6px;
+}
+
+
+/* =========================================================
+   GOOGLE MAP
+========================================================= */
+
+.map-wrapper{
+    max-width:1100px;
+    margin:35px auto 0;
+    background:white;
+    border:1px solid #e4e9f0;
+    border-radius:16px;
+    padding:12px;
+    box-shadow:0 8px 25px rgba(5,25,60,.07);
+    overflow:hidden;
+}
+
+.map-title{
+    padding:12px 15px 15px;
+    color:var(--blue);
+    font-size:22px;
+    font-weight:800;
+}
+
+.map-title span{
+    color:var(--red);
+}
+
+.map-wrapper iframe{
+    width:100%;
+    height:360px;
+    border:0;
+    border-radius:12px;
+    display:block;
+}
+
 
 /* =========================================================
    FOOTER
@@ -827,8 +900,8 @@ footer{
     position:fixed;
     right:20px;
     bottom:20px;
-    width:58px;
-    height:58px;
+    width:60px;
+    height:60px;
     border-radius:50%;
     background:#25d366;
     color:white;
@@ -836,9 +909,19 @@ footer{
     align-items:center;
     justify-content:center;
     text-decoration:none;
-    font-size:28px;
     box-shadow:0 8px 25px rgba(0,0,0,.25);
     z-index:999;
+    transition:.25s;
+}
+
+.float-wa:hover{
+    transform:scale(1.08);
+}
+
+.float-wa svg{
+    width:32px;
+    height:32px;
+    fill:white;
 }
 
 
@@ -846,10 +929,30 @@ footer{
    TABLET
 ========================================================= */
 
-@media(max-width:1000px){
+@media(max-width:1100px){
+
+    .navbar{
+        padding-left:18px;
+        padding-right:18px;
+        gap:12px;
+    }
+
+    .logo img{
+        width:140px;
+        height:72px;
+    }
 
     nav{
-        gap:14px;
+        gap:13px;
+    }
+
+    nav a{
+        font-size:12.5px;
+    }
+
+    .header-phone{
+        font-size:12px;
+        padding:9px 10px;
     }
 
     .cards{
@@ -887,12 +990,24 @@ footer{
 @media(max-width:700px){
 
     .navbar{
-        padding:10px 15px;
+        min-height:82px;
+        padding:7px 15px;
+        gap:10px;
     }
 
     .logo img{
-        width:145px;
-        height:80px;
+        width:130px;
+        height:68px;
+    }
+
+    .header-phone{
+        margin-left:auto;
+        font-size:12px;
+        padding:9px 10px;
+    }
+
+    .header-phone-icon{
+        font-size:15px;
     }
 
     nav{
@@ -903,12 +1018,26 @@ footer{
         right:0;
         background:white;
         flex-direction:column;
-        padding:20px;
+        align-items:stretch;
+        gap:0;
+        padding:10px 20px 20px;
         box-shadow:0 10px 25px rgba(0,0,0,.10);
     }
 
     nav.active{
         display:flex;
+    }
+
+    nav a{
+        font-size:15px;
+        padding:12px 5px;
+        border-bottom:1px solid #edf0f5;
+    }
+
+    nav .nav-btn{
+        text-align:center;
+        margin-top:10px;
+        border:none;
     }
 
     .menu{
@@ -975,6 +1104,41 @@ footer{
         grid-template-columns:1fr;
     }
 
+    .map-wrapper iframe{
+        height:300px;
+    }
+
+    .map-title{
+        font-size:19px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:430px){
+
+    .logo img{
+        width:115px;
+        height:62px;
+    }
+
+    .header-phone{
+        font-size:11px;
+        padding:8px 8px;
+    }
+
+    .header-phone-icon{
+        display:none;
+    }
+
+    .menu{
+        font-size:25px;
+    }
+
 }
 
 </style>
@@ -1004,26 +1168,54 @@ alt="NTS Surveillance Technologies - CCTV Dealers in Tirupati">
 
 <nav>
 
-<a href="#home">Home</a>
+<a href="#home">
+Home
+</a>
 
-<a href="#about">About</a>
+<a href="#about">
+About
+</a>
 
-<a href="#services">CCTV Services</a>
+<a href="#services">
+CCTV Services
+</a>
 
-<a href="#products">Products</a>
+<a href="#products">
+Products
+</a>
 
-<a href="#amc">AMC & Repair</a>
+<a href="#amc">
+AMC & Repair
+</a>
 
-<a href="#faq">FAQ</a>
+<a href="#faq">
+FAQ
+</a>
 
-<a href="#contact">Contact</a>
+<a href="#contact">
+Contact
+</a>
 
-<a href="#contact"
+<a
+href="#contact"
 class="nav-btn">
+
 Get Quote
+
 </a>
 
 </nav>
+
+
+<a
+href="tel:+918008911440"
+class="header-phone">
+
+<span class="header-phone-icon">☎</span>
+
+8008911440
+
+</a>
 
 
 <div class="menu">
@@ -2010,8 +2202,7 @@ Phone
 </strong>
 
 <span>
-8008911440<br>
-9581111379
+8008911440
 </span>
 
 </div>
@@ -2102,6 +2293,25 @@ class="btn call">
 href="https://wa.me/918008911440?text=Hello%20NTS%20Surveillance%20Technologies,%20I%20need%20a%20CCTV%20quotation."
 class="btn whatsapp">
 
+<svg
+class="whatsapp-icon"
+viewBox="0 0 24 24"
+xmlns="http://www.w3.org/2000/svg">
+
+<circle
+cx="12"
+cy="12"
+r="10"
+fill="none"
+stroke="currentColor"
+stroke-width="2"/>
+
+<path
+d="M8.2 7.5c.3-.4.7-.5 1.1-.2l1.1 1.1c.3.3.3.7.1 1l-.6.8c.5 1 1.3 1.8 2.3 2.3l.8-.6c.3-.2.7-.2 1 .1l1.1 1.1c.3.3.2.8-.2 1.1-.7.6-1.7.8-2.6.5-2.8-.9-5-3.1-5.9-5.9-.3-.9-.1-1.9.5-2.6z"
+fill="currentColor"/>
+
+</svg>
+
 WhatsApp
 
 </a>
@@ -2180,6 +2390,28 @@ REQUEST QUOTATION
 </div>
 
 </div>
+
+
+<!-- =========================================================
+     GOOGLE MAP LOCATION
+========================================================= -->
+
+<div class="map-wrapper">
+
+<div class="map-title">
+<span>📍</span>
+Find NTS Surveillance Technologies
+</div>
+
+<iframe
+src="https://www.google.com/maps?q=19-8-36%2C%20Hathiramji%20Colony%2C%20Bairagi%20Pattedda%2C%20Tirupati%2C%20Andhra%20Pradesh%20517501&output=embed"
+loading="lazy"
+referrerpolicy="no-referrer-when-downgrade"
+allowfullscreen>
+</iframe>
+
+</div>
+
 
 </section>
 
@@ -2270,11 +2502,6 @@ Contact
 
 
 <p>
-9581111379
-</p>
-
-
-<p>
 
 19-8-36, Hathiramji Colony,<br>
 Bairagi Pattedda, Tirupati,<br>
@@ -2305,9 +2532,26 @@ All Rights Reserved.
 <a
 class="float-wa"
 href="https://wa.me/918008911440?text=Hello%20NTS%20Surveillance%20Technologies,%20I%20need%20a%20CCTV%20security%20solution."
-title="WhatsApp NTS">
+title="WhatsApp NTS"
+aria-label="Chat with NTS Surveillance Technologies on WhatsApp">
 
-☘
+<svg
+viewBox="0 0 24 24"
+xmlns="http://www.w3.org/2000/svg">
+
+<circle
+cx="12"
+cy="12"
+r="10"
+fill="none"
+stroke="white"
+stroke-width="2"/>
+
+<path
+d="M8.2 7.5c.3-.4.7-.5 1.1-.2l1.1 1.1c.3.3.3.7.1 1l-.6.8c.5 1 1.3 1.8 2.3 2.3l.8-.6c.3-.2.7-.2 1 .1l1.1 1.1c.3.3.2.8-.2 1.1-.7.6-1.7.8-2.6.5-2.8-.9-5-3.1-5.9-5.9-.3-.9-.1-1.9.5-2.6z"
+fill="white"/>
+
+</svg>
 
 </a>
 
