@@ -283,6 +283,79 @@ nav a:hover{
 
 
 /* =========================================================
+   PREMIUM SCROLLING SERVICE BAR
+========================================================= */
+
+.service-marquee{
+    width:100%;
+    overflow:hidden;
+    background:linear-gradient(
+        90deg,
+        #071a3d,
+        #0b2d63,
+        #071a3d
+    );
+    border-top:1px solid rgba(255,255,255,.08);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    position:relative;
+    z-index:999;
+    box-shadow:0 4px 14px rgba(7,26,61,.18);
+}
+
+.service-marquee-track{
+    display:flex;
+    width:max-content;
+    animation:ntsScroll 32s linear infinite;
+    will-change:transform;
+}
+
+.service-marquee-content{
+    display:flex;
+    align-items:center;
+    white-space:nowrap;
+    min-height:46px;
+    padding-right:0;
+}
+
+.service-marquee-item{
+    display:inline-flex;
+    align-items:center;
+    color:white;
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:.2px;
+    padding:0 25px;
+}
+
+.service-marquee-item strong{
+    color:#ff4b52;
+    margin-right:7px;
+}
+
+.service-marquee-separator{
+    color:rgba(255,255,255,.30);
+    font-size:18px;
+    font-weight:400;
+}
+
+@keyframes ntsScroll{
+
+    0%{
+        transform:translateX(0);
+    }
+
+    100%{
+        transform:translateX(-50%);
+    }
+
+}
+
+.service-marquee:hover .service-marquee-track{
+    animation-play-state:paused;
+}
+
+
+/* =========================================================
    BUTTONS
 ========================================================= */
 
@@ -1156,6 +1229,26 @@ footer a:hover{
     }
 
 
+    /* SCROLLING SERVICE BAR */
+
+    .service-marquee-content{
+        min-height:42px;
+    }
+
+    .service-marquee-item{
+        font-size:12px;
+        padding:0 18px;
+    }
+
+    .service-marquee-separator{
+        font-size:15px;
+    }
+
+    .service-marquee-track{
+        animation-duration:25s;
+    }
+
+
     /* HERO */
 
     .hero{
@@ -1437,6 +1530,168 @@ aria-label="Open menu"
 </div>
 
 </header>
+
+
+<!-- =========================================================
+     PREMIUM SCROLLING SERVICE BAR
+========================================================= -->
+
+<div
+class="service-marquee"
+aria-label="NTS Surveillance Technologies services"
+>
+
+<div class="service-marquee-track">
+
+
+<div class="service-marquee-content">
+
+
+<div class="service-marquee-item">
+<strong>📹</strong>
+CCTV Sales & Installation
+</div>
+
+<div class="service-marquee-separator">
+•
+</div>
+
+
+<div class="service-marquee-item">
+<strong>🔧</strong>
+CCTV Repair & Service
+</div>
+
+<div class="service-marquee-separator">
+•
+</div>
+
+
+<div class="service-marquee-item">
+<strong>🛡️</strong>
+CCTV AMC & Maintenance
+</div>
+
+<div class="service-marquee-separator">
+•
+</div>
+
+
+<div class="service-marquee-item">
+<strong>☀️</strong>
+Solar CCTV Solutions
+</div>
+
+<div class="service-marquee-separator">
+•
+</div>
+
+
+<div class="service-marquee-item">
+<strong>📡</strong>
+Wi-Fi & Networking
+</div>
+
+<div class="service-marquee-separator">
+•
+</div>
+
+
+<div class="service-marquee-item">
+<strong>🚨</strong>
+Security Solutions
+</div>
+
+<div class="service-marquee-separator">
+•
+</div>
+
+
+<div class="service-marquee-item">
+<strong>☎️</strong>
+Call NTS: 8008911440
+</div>
+
+
+</div>
+
+
+<!-- DUPLICATE SET FOR SEAMLESS LOOP -->
+
+<div class="service-marquee-content">
+
+
+<div class="service-marquee-item">
+<strong>📹</strong>
+CCTV Sales & Installation
+</div>
+
+<div class="service-marquee-separator">
+•
+</div>
+
+
+<div class="service-marquee-item">
+<strong>🔧</strong>
+CCTV Repair & Service
+</div>
+
+<div class="service-marquee-separator">
+•
+</div>
+
+
+<div class="service-marquee-item">
+<strong>🛡️</strong>
+CCTV AMC & Maintenance
+</div>
+
+<div class="service-marquee-separator">
+•
+</div>
+
+
+<div class="service-marquee-item">
+<strong>☀️</strong>
+Solar CCTV Solutions
+</div>
+
+<div class="service-marquee-separator">
+•
+</div>
+
+
+<div class="service-marquee-item">
+<strong>📡</strong>
+Wi-Fi & Networking
+</div>
+
+<div class="service-marquee-separator">
+•
+</div>
+
+
+<div class="service-marquee-item">
+<strong>🚨</strong>
+Security Solutions
+</div>
+
+<div class="service-marquee-separator">
+•
+</div>
+
+
+<div class="service-marquee-item">
+<strong>☎️</strong>
+Call NTS: 8008911440
+</div>
+
+
+</div>
+
+</div>
+
+</div>
 
 
 <!-- =========================================================
@@ -2703,10 +2958,6 @@ title="NTS Surveillance Technologies Location"
 
 <!-- =======================================================
      NAVIGATE BUTTON
-
-     IMPORTANT:
-     This is a DIRECTIONS URL.
-     It will NOT open the Business Profile directly.
 ======================================================== -->
 
 <a
