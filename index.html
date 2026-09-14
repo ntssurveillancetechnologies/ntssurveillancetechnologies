@@ -204,7 +204,9 @@ header{
 }
 
 
-/* LOGO */
+/* =========================================================
+   LOGO
+========================================================= */
 
 .logo{
     width:105px;
@@ -223,7 +225,9 @@ header{
 }
 
 
-/* NAVIGATION */
+/* =========================================================
+   NAVIGATION
+========================================================= */
 
 nav{
     flex:1;
@@ -246,25 +250,43 @@ nav a:hover{
 }
 
 .nav-btn{
-    background:linear-gradient(135deg,var(--red),#9e0007);
+    background:linear-gradient(
+        135deg,
+        var(--red),
+        #9e0007
+    );
+
     color:white !important;
+
     padding:12px 19px;
+
     border-radius:9px;
-    box-shadow:0 6px 16px rgba(215,25,32,.18);
+
+    box-shadow:
+    0 6px 16px rgba(215,25,32,.18);
 }
 
 
-/* PHONE */
+/* =========================================================
+   HEADER PHONE
+========================================================= */
 
 .header-phone{
     background:var(--blue);
     color:white;
+
     padding:13px 17px;
+
     border-radius:9px;
+
     font-size:15px;
+
     font-weight:800;
+
     white-space:nowrap;
-    box-shadow:0 7px 18px rgba(7,26,61,.20);
+
+    box-shadow:
+    0 7px 18px rgba(7,26,61,.20);
 }
 
 .header-phone span{
@@ -272,7 +294,9 @@ nav a:hover{
 }
 
 
-/* MOBILE MENU */
+/* =========================================================
+   MOBILE MENU
+========================================================= */
 
 .menu{
     display:none;
@@ -288,60 +312,102 @@ nav a:hover{
 
 .service-marquee{
     width:100%;
+
     overflow:hidden;
-    background:linear-gradient(
+
+    background:
+    linear-gradient(
         90deg,
         #071a3d,
         #0b2d63,
         #071a3d
     );
-    border-top:1px solid rgba(255,255,255,.08);
-    border-bottom:1px solid rgba(255,255,255,.08);
+
+    border-top:
+    1px solid rgba(255,255,255,.08);
+
+    border-bottom:
+    1px solid rgba(255,255,255,.08);
+
     position:relative;
+
     z-index:999;
-    box-shadow:0 4px 14px rgba(7,26,61,.18);
+
+    box-shadow:
+    0 4px 14px rgba(7,26,61,.18);
 }
 
 .service-marquee-track{
     display:flex;
+
     width:max-content;
-    animation:ntsScroll 32s linear infinite;
+
+    animation:
+    ntsScroll 32s linear infinite;
+
     will-change:transform;
 }
 
 .service-marquee-content{
     display:flex;
+
     align-items:center;
+
     white-space:nowrap;
+
     min-height:46px;
+
     padding-right:0;
 }
 
 .service-marquee-item{
     display:inline-flex;
+
     align-items:center;
+
     color:white;
+
     font-size:14px;
+
     font-weight:800;
+
     letter-spacing:.2px;
+
     padding:0 25px;
 }
 
 .service-marquee-item strong{
     color:#ff3038;
+
     margin-right:7px;
 }
 
+
+/* PHONE NUMBER MUST BE RED */
+
 .service-marquee-phone{
     color:#ff3038 !important;
+
     font-weight:900;
+
     margin-left:5px;
+
     text-decoration:none !important;
+}
+
+
+/* FORCE RED EVEN IF OTHER STYLES OVERRIDE */
+
+.service-marquee-item
+.service-marquee-phone{
+    color:#ff3038 !important;
 }
 
 .service-marquee-separator{
     color:rgba(255,255,255,.30);
+
     font-size:18px;
+
     font-weight:400;
 }
 
@@ -357,7 +423,8 @@ nav a:hover{
 
 }
 
-.service-marquee:hover .service-marquee-track{
+.service-marquee:hover
+.service-marquee-track{
     animation-play-state:paused;
 }
 
@@ -368,14 +435,23 @@ nav a:hover{
 
 .btn{
     display:inline-flex;
+
     align-items:center;
+
     justify-content:center;
+
     gap:8px;
+
     padding:14px 22px;
+
     border-radius:9px;
+
     font-size:15px;
+
     font-weight:800;
+
     transition:.25s;
+
     cursor:pointer;
 }
 
@@ -384,24 +460,37 @@ nav a:hover{
 }
 
 .btn-red{
-    background:linear-gradient(135deg,var(--red),#9e0007);
+    background:
+    linear-gradient(
+        135deg,
+        var(--red),
+        #9e0007
+    );
+
     color:white;
-    box-shadow:0 8px 20px rgba(215,25,32,.22);
+
+    box-shadow:
+    0 8px 20px rgba(215,25,32,.22);
 }
 
 .btn-white{
     background:white;
+
     color:var(--blue);
-    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+    box-shadow:
+    0 8px 20px rgba(0,0,0,.12);
 }
 
 .btn.call{
     background:var(--red);
+
     color:white;
 }
 
 .btn.whatsapp{
     background:var(--green);
+
     color:white;
 }
 
@@ -412,20 +501,28 @@ nav a:hover{
 
 .hero{
     min-height:560px;
-    background:linear-gradient(
+
+    background:
+    linear-gradient(
         110deg,
         rgba(7,19,38,.98),
         rgba(11,45,99,.93)
     );
+
     color:white;
+
     display:flex;
+
     align-items:center;
+
     padding:48px 7%;
 }
 
 .hero-content{
     width:100%;
+
     max-width:1080px;
+
     margin:auto;
 }
 
@@ -434,11 +531,17 @@ nav a:hover{
 
 .hero-brand{
     font-size:30px;
+
     line-height:1.15;
+
     font-weight:900;
+
     letter-spacing:1.5px;
+
     text-transform:uppercase;
+
     margin-bottom:15px;
+
     color:white;
 }
 
@@ -451,19 +554,31 @@ nav a:hover{
 
 .badge{
     display:inline-flex;
+
     align-items:center;
+
     gap:9px;
+
     padding:9px 17px;
+
     border-radius:30px;
-    border:1px solid rgba(255,255,255,.25);
-    background:rgba(215,25,32,.18);
+
+    border:
+    1px solid rgba(255,255,255,.25);
+
+    background:
+    rgba(215,25,32,.18);
+
     font-size:14px;
+
     font-weight:800;
+
     margin-bottom:17px;
 }
 
 .badge span{
     color:#ff3038;
+
     font-size:18px;
 }
 
@@ -472,9 +587,13 @@ nav a:hover{
 
 .hero h1{
     font-size:62px;
+
     line-height:1.05;
+
     letter-spacing:-2px;
+
     font-weight:900;
+
     margin-bottom:22px;
 }
 
@@ -484,14 +603,19 @@ nav a:hover{
 
 .hero p{
     max-width:850px;
+
     font-size:18px;
+
     color:#e6ebf4;
+
     margin-bottom:29px;
 }
 
 .hero-buttons{
     display:flex;
+
     flex-wrap:wrap;
+
     gap:13px;
 }
 
@@ -502,20 +626,29 @@ nav a:hover{
 
 .stats{
     background:white;
-    box-shadow:0 5px 20px rgba(0,0,0,.05);
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.05);
 }
 
 .stats-grid{
     max-width:1200px;
+
     margin:auto;
+
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+
+    grid-template-columns:
+    repeat(4,1fr);
 }
 
 .stat{
     padding:27px 15px;
+
     text-align:center;
-    border-right:1px solid #e5e9ef;
+
+    border-right:
+    1px solid #e5e9ef;
 }
 
 .stat:last-child{
@@ -524,12 +657,15 @@ nav a:hover{
 
 .stat h3{
     color:var(--red);
+
     font-size:27px;
+
     font-weight:900;
 }
 
 .stat p{
     font-size:13px;
+
     color:var(--muted);
 }
 
@@ -544,20 +680,27 @@ section{
 
 .section-head{
     text-align:center;
+
     max-width:800px;
+
     margin:0 auto 48px;
 }
 
 .section-head small{
     color:var(--red);
+
     font-weight:900;
+
     letter-spacing:2px;
 }
 
 .section-head h2{
     font-size:42px;
+
     line-height:1.15;
+
     color:var(--blue);
+
     margin:8px 0 13px;
 }
 
@@ -571,7 +714,8 @@ section{
 ========================================================= */
 
 .about{
-    background:linear-gradient(
+    background:
+    linear-gradient(
         135deg,
         #eef4fb,
         #ffffff
@@ -580,67 +724,95 @@ section{
 
 .about-grid{
     max-width:1150px;
+
     margin:auto;
+
     display:grid;
-    grid-template-columns:1fr 1fr;
+
+    grid-template-columns:
+    1fr 1fr;
+
     gap:55px;
+
     align-items:center;
 }
 
 .about-box{
-    background:linear-gradient(
+    background:
+    linear-gradient(
         145deg,
         #071a3d,
         #0d3775
     );
+
     color:white;
+
     padding:45px;
+
     border-radius:20px;
+
     position:relative;
+
     overflow:hidden;
 }
 
 .about-box:after{
     content:"NTS";
+
     position:absolute;
+
     font-size:180px;
+
     font-weight:900;
+
     opacity:.035;
+
     right:-20px;
+
     bottom:-40px;
 }
 
 .about-box h3{
     font-size:34px;
+
     line-height:1.2;
+
     margin-bottom:15px;
 }
 
 .about-text small{
     color:var(--red);
+
     font-weight:900;
+
     letter-spacing:2px;
 }
 
 .about-text h2{
     font-size:40px;
+
     color:var(--blue);
+
     line-height:1.15;
+
     margin:8px 0 18px;
 }
 
 .about-text p{
     color:var(--muted);
+
     margin-bottom:16px;
 }
 
 .check{
     margin:10px 0;
+
     font-weight:700;
 }
 
 .check span{
     color:var(--red);
+
     margin-right:8px;
 }
 
@@ -655,52 +827,80 @@ section{
 
 .cards{
     max-width:1200px;
+
     margin:auto;
+
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+
+    grid-template-columns:
+    repeat(4,1fr);
+
     gap:20px;
 }
 
 .card{
     background:white;
-    border:1px solid #e4e9f0;
+
+    border:
+    1px solid #e4e9f0;
+
     border-radius:14px;
+
     padding:28px 22px;
+
     transition:.3s;
-    box-shadow:0 8px 25px rgba(5,25,60,.05);
+
+    box-shadow:
+    0 8px 25px rgba(5,25,60,.05);
 }
 
 .card:hover{
     transform:translateY(-6px);
+
     border-color:var(--red);
-    box-shadow:0 15px 35px rgba(5,25,60,.12);
+
+    box-shadow:
+    0 15px 35px rgba(5,25,60,.12);
 }
 
 .icon{
     width:55px;
+
     height:55px;
+
     border-radius:13px;
-    background:linear-gradient(
+
+    background:
+    linear-gradient(
         135deg,
         #071a3d,
         #174d9c
     );
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     color:white;
+
     font-size:25px;
+
     margin-bottom:18px;
 }
 
 .card h3{
     color:var(--blue);
+
     margin-bottom:8px;
+
     line-height:1.3;
 }
 
 .card p{
     color:var(--muted);
+
     font-size:14px;
 }
 
@@ -728,41 +928,55 @@ section{
 
 .local-seo-box{
     max-width:1100px;
+
     margin:auto;
-    background:linear-gradient(
+
+    background:
+    linear-gradient(
         135deg,
         #071a3d,
         #0b2d63
     );
+
     color:white;
+
     padding:50px;
+
     border-radius:20px;
 }
 
 .local-seo-box h2{
     font-size:38px;
+
     margin-bottom:18px;
 }
 
 .local-seo-box p{
     color:#e5eaf3;
+
     margin-bottom:15px;
 }
 
 .local-list{
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+
+    grid-template-columns:
+    repeat(2,1fr);
+
     gap:10px 30px;
+
     margin-top:25px;
 }
 
 .local-list div{
     padding:8px 0;
+
     font-weight:700;
 }
 
 .local-list span{
     color:#ff3038;
+
     margin-right:8px;
 }
 
@@ -772,7 +986,8 @@ section{
 ========================================================= */
 
 .amc{
-    background:linear-gradient(
+    background:
+    linear-gradient(
         135deg,
         #eef3f9,
         #ffffff
@@ -781,22 +996,34 @@ section{
 
 .amc-grid{
     max-width:1100px;
+
     margin:auto;
+
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+    repeat(3,1fr);
+
     gap:20px;
 }
 
 .amc-card{
     background:white;
+
     padding:32px;
+
     border-radius:15px;
-    border:1px solid #e5eaf1;
-    box-shadow:0 8px 25px rgba(0,0,0,.06);
+
+    border:
+    1px solid #e5eaf1;
+
+    box-shadow:
+    0 8px 25px rgba(0,0,0,.06);
 }
 
 .amc-card h3{
     color:var(--blue);
+
     margin-bottom:12px;
 }
 
@@ -815,19 +1042,26 @@ section{
 
 .faq-container{
     max-width:950px;
+
     margin:auto;
 }
 
 .faq-item{
     padding:24px;
+
     margin-bottom:15px;
+
     border-radius:12px;
+
     background:#f7f9fc;
-    border:1px solid #e5eaf0;
+
+    border:
+    1px solid #e5eaf0;
 }
 
 .faq-item h3{
     color:var(--blue);
+
     margin-bottom:8px;
 }
 
@@ -841,23 +1075,29 @@ section{
 ========================================================= */
 
 .cta{
-    background:linear-gradient(
+    background:
+    linear-gradient(
         135deg,
         var(--red),
         #9e0007
     );
+
     color:white;
+
     text-align:center;
 }
 
 .cta h2{
     font-size:42px;
+
     margin-bottom:12px;
 }
 
 .cta p{
     max-width:760px;
+
     margin:0 auto 25px;
+
     color:#ffecee;
 }
 
@@ -872,46 +1112,70 @@ section{
 
 .contact-grid{
     max-width:1150px;
+
     margin:auto;
+
     display:grid;
-    grid-template-columns:1fr 1fr;
+
+    grid-template-columns:
+    1fr 1fr;
+
     gap:28px;
 }
 
 .contact-card{
     background:white;
+
     padding:35px;
+
     border-radius:16px;
-    box-shadow:0 8px 28px rgba(0,0,0,.07);
-    border:1px solid #e8edf4;
+
+    box-shadow:
+    0 8px 28px rgba(0,0,0,.07);
+
+    border:
+    1px solid #e8edf4;
 }
 
 .contact-card h2{
     color:var(--blue);
+
     margin-bottom:22px;
 }
 
 .contact-item{
     display:flex;
+
     gap:15px;
+
     margin:20px 0;
 }
 
 .contact-icon{
     width:42px;
+
     height:42px;
+
     flex-shrink:0;
+
     border-radius:10px;
+
     background:#edf2fa;
+
     color:var(--red);
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     font-weight:900;
 }
 
 .contact-item strong{
     display:block;
+
     color:var(--blue);
 }
 
@@ -921,8 +1185,11 @@ section{
 
 .contact-actions{
     display:flex;
+
     flex-wrap:wrap;
+
     gap:12px;
+
     margin-top:25px;
 }
 
@@ -933,62 +1200,88 @@ section{
 
 .map-section{
     background:white;
-    padding:0 6% 80px;
+
+    padding:
+    0 6% 80px;
 }
 
 .map-box{
     max-width:1150px;
+
     margin:auto;
+
     overflow:hidden;
+
     border-radius:18px;
-    box-shadow:0 12px 35px rgba(0,0,0,.12);
-    border:1px solid #e5e9ef;
+
+    box-shadow:
+    0 12px 35px rgba(0,0,0,.12);
+
+    border:
+    1px solid #e5e9ef;
+
     position:relative;
 }
 
 .map-title{
     padding:24px 30px;
+
     background:var(--blue);
+
     color:white;
 }
 
 .map-title h2{
     font-size:27px;
+
     margin-bottom:5px;
 }
 
 .map-title p{
     color:#dbe4f1;
+
     font-size:14px;
 }
 
 .map-frame{
     position:relative;
+
     width:100%;
+
     background:#eef2f6;
 }
 
 .map-frame iframe{
     display:block;
+
     width:100%;
+
     height:430px;
+
     border:0;
 }
 
 
 /* =========================================================
    NAVIGATE BUTTON
+   EXACT USER GOOGLE MAPS SHARE LINK
 ========================================================= */
 
 .map-navigate{
     position:absolute;
+
     left:22px;
+
     bottom:22px;
+
     z-index:10;
 
     display:inline-flex;
+
     align-items:center;
+
     justify-content:center;
+
     gap:9px;
 
     background:
@@ -1027,10 +1320,15 @@ section{
 
 .map-navigate-icon{
     width:23px;
+
     height:23px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     font-size:19px;
 }
 
@@ -1041,33 +1339,46 @@ section{
 
 footer{
     background:var(--dark);
+
     color:white;
+
     padding:60px 7% 20px;
 }
 
 .footer-grid{
     max-width:1150px;
+
     margin:auto;
+
     display:grid;
-    grid-template-columns:1.4fr 1fr 1fr;
+
+    grid-template-columns:
+    1.4fr 1fr 1fr;
+
     gap:50px;
 }
 
 footer h3{
     color:white;
+
     margin-bottom:15px;
 }
 
 footer p{
     color:#b9c4d4;
+
     font-size:14px;
+
     margin-bottom:6px;
 }
 
 footer a{
     display:block;
+
     color:#b9c4d4;
+
     margin:8px 0;
+
     font-size:14px;
 }
 
@@ -1077,11 +1388,18 @@ footer a:hover{
 
 .footer-bottom{
     max-width:1150px;
+
     margin:40px auto 0;
+
     padding-top:20px;
-    border-top:1px solid rgba(255,255,255,.12);
+
+    border-top:
+    1px solid rgba(255,255,255,.12);
+
     text-align:center;
+
     color:#8996aa;
+
     font-size:13px;
 }
 
@@ -1092,15 +1410,23 @@ footer a:hover{
 
 .float-wa{
     position:fixed;
+
     right:22px;
+
     bottom:22px;
+
     width:62px;
+
     height:62px;
+
     border-radius:50%;
+
     background:#25D366;
 
     display:flex;
+
     align-items:center;
+
     justify-content:center;
 
     box-shadow:
@@ -1117,7 +1443,9 @@ footer a:hover{
 
 .float-wa svg{
     width:35px;
+
     height:35px;
+
     fill:white;
 }
 
@@ -1142,15 +1470,18 @@ footer a:hover{
 
     .header-phone{
         padding:11px 12px;
+
         font-size:13px;
     }
 
     .cards{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:
+        repeat(2,1fr);
     }
 
     .stats-grid{
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:
+        repeat(2,1fr);
     }
 
     .stat:nth-child(2){
@@ -1170,18 +1501,26 @@ footer a:hover{
 
     header{
         position:sticky;
+
         top:0;
+
         z-index:1000;
     }
 
     .navbar{
         min-height:auto;
-        padding:5px 12px 0;
+
+        padding:
+        5px 12px 0;
+
         gap:0;
 
         display:flex;
+
         flex-wrap:wrap;
+
         align-items:center;
+
         justify-content:space-between;
     }
 
@@ -1190,12 +1529,15 @@ footer a:hover{
 
     .logo{
         width:82px;
+
         height:64px;
+
         flex-shrink:0;
     }
 
     .logo img{
         width:76px;
+
         height:60px;
     }
 
@@ -1204,6 +1546,7 @@ footer a:hover{
 
     .header-phone{
         margin-left:auto;
+
         margin-right:2px;
 
         padding:10px 12px;
@@ -1236,7 +1579,8 @@ footer a:hover{
 
         flex:none;
 
-        width:calc(100% + 24px);
+        width:
+        calc(100% + 24px);
 
         margin-left:-12px;
 
@@ -1279,7 +1623,8 @@ footer a:hover{
 
         padding:13px 15px;
 
-        border-bottom:3px solid transparent;
+        border-bottom:
+        3px solid transparent;
 
         font-size:13px;
 
@@ -1294,6 +1639,7 @@ footer a:hover{
 
     nav a:hover{
         color:var(--red);
+
         background:#f7f9fc;
     }
 
@@ -1309,7 +1655,8 @@ footer a:hover{
 
         padding:13px 17px;
 
-        background:linear-gradient(
+        background:
+        linear-gradient(
             135deg,
             var(--red),
             #9e0007
@@ -1329,6 +1676,7 @@ footer a:hover{
 
     .service-marquee-item{
         font-size:12px;
+
         padding:0 18px;
     }
 
@@ -1340,27 +1688,38 @@ footer a:hover{
         animation-duration:25s;
     }
 
+    .service-marquee-phone{
+        color:#ff3038 !important;
+        font-weight:900;
+    }
+
 
     /* HERO */
 
     .hero{
         min-height:auto;
-        padding:40px 6% 52px;
+
+        padding:
+        40px 6% 52px;
     }
 
     .hero-brand{
         font-size:20px;
+
         letter-spacing:1px;
+
         margin-bottom:13px;
     }
 
     .badge{
         font-size:12px;
+
         padding:8px 12px;
     }
 
     .hero h1{
         font-size:41px;
+
         letter-spacing:-1px;
     }
 
@@ -1370,6 +1729,7 @@ footer a:hover{
 
     .hero-buttons{
         flex-direction:column;
+
         align-items:stretch;
     }
 
@@ -1433,7 +1793,8 @@ footer a:hover{
     /* MAP */
 
     .map-section{
-        padding:0 6% 60px;
+        padding:
+        0 6% 60px;
     }
 
     .map-title{
@@ -1450,8 +1811,11 @@ footer a:hover{
 
     .map-navigate{
         left:15px;
+
         bottom:15px;
+
         padding:12px 17px;
+
         font-size:14px;
     }
 
@@ -1460,6 +1824,7 @@ footer a:hover{
 
     .footer-grid{
         grid-template-columns:1fr;
+
         gap:30px;
     }
 
@@ -1468,13 +1833,17 @@ footer a:hover{
 
     .float-wa{
         width:56px;
+
         height:56px;
+
         right:16px;
+
         bottom:16px;
     }
 
     .float-wa svg{
         width:31px;
+
         height:31px;
     }
 
@@ -1489,21 +1858,25 @@ footer a:hover{
 
     .logo{
         width:76px;
+
         height:60px;
     }
 
     .logo img{
         width:71px;
+
         height:56px;
     }
 
     .header-phone{
         font-size:11px;
+
         padding:9px 10px;
     }
 
     nav a{
         padding:12px 13px;
+
         font-size:12px;
     }
 
@@ -1516,7 +1889,8 @@ footer a:hover{
     }
 
     .stats-grid{
-        grid-template-columns:1fr 1fr;
+        grid-template-columns:
+        1fr 1fr;
     }
 
     .stat{
@@ -1537,8 +1911,11 @@ footer a:hover{
 
     .map-navigate{
         left:12px;
+
         bottom:12px;
+
         padding:11px 14px;
+
         font-size:13px;
     }
 
@@ -1651,85 +2028,7 @@ aria-label="NTS Surveillance Technologies services"
 <div class="service-marquee-track">
 
 
-<div class="service-marquee-content">
-
-
-<div class="service-marquee-item">
-<strong>📹</strong>
-CCTV Sales & Installation
-</div>
-
-<div class="service-marquee-separator">
-•
-</div>
-
-
-<div class="service-marquee-item">
-<strong>🔧</strong>
-CCTV Repair & Service
-</div>
-
-<div class="service-marquee-separator">
-•
-</div>
-
-
-<div class="service-marquee-item">
-<strong>🛡️</strong>
-CCTV AMC & Maintenance
-</div>
-
-<div class="service-marquee-separator">
-•
-</div>
-
-
-<div class="service-marquee-item">
-<strong>☀️</strong>
-Solar CCTV Solutions
-</div>
-
-<div class="service-marquee-separator">
-•
-</div>
-
-
-<div class="service-marquee-item">
-<strong>📡</strong>
-Wi-Fi & Networking
-</div>
-
-<div class="service-marquee-separator">
-•
-</div>
-
-
-<div class="service-marquee-item">
-<strong>🚨</strong>
-Security Solutions
-</div>
-
-<div class="service-marquee-separator">
-•
-</div>
-
-
-<div class="service-marquee-item">
-<strong>☎️</strong>
-Call NTS:
-<span
-class="service-marquee-phone"
-style="color:#ff3038 !important;"
->
-8008911440
-</span>
-</div>
-
-
-</div>
-
-
-<!-- DUPLICATE SET FOR SEAMLESS LOOP -->
+<!-- FIRST SET -->
 
 <div class="service-marquee-content">
 
@@ -1795,14 +2094,102 @@ Security Solutions
 
 
 <div class="service-marquee-item">
+
 <strong>☎️</strong>
+
 Call NTS:
+
 <span
 class="service-marquee-phone"
 style="color:#ff3038 !important;"
 >
 8008911440
 </span>
+
+</div>
+
+
+</div>
+
+
+<!-- SECOND SET -->
+
+<div class="service-marquee-content">
+
+
+<div class="service-marquee-item">
+<strong>📹</strong>
+CCTV Sales & Installation
+</div>
+
+<div class="service-marquee-separator">
+•
+</div>
+
+
+<div class="service-marquee-item">
+<strong>🔧</strong>
+CCTV Repair & Service
+</div>
+
+<div class="service-marquee-separator">
+•
+</div>
+
+
+<div class="service-marquee-item">
+<strong>🛡️</strong>
+CCTV AMC & Maintenance
+</div>
+
+<div class="service-marquee-separator">
+•
+</div>
+
+
+<div class="service-marquee-item">
+<strong>☀️</strong>
+Solar CCTV Solutions
+</div>
+
+<div class="service-marquee-separator">
+•
+</div>
+
+
+<div class="service-marquee-item">
+<strong>📡</strong>
+Wi-Fi & Networking
+</div>
+
+<div class="service-marquee-separator">
+•
+</div>
+
+
+<div class="service-marquee-item">
+<strong>🚨</strong>
+Security Solutions
+</div>
+
+<div class="service-marquee-separator">
+•
+</div>
+
+
+<div class="service-marquee-item">
+
+<strong>☎️</strong>
+
+Call NTS:
+
+<span
+class="service-marquee-phone"
+style="color:#ff3038 !important;"
+>
+8008911440
+</span>
+
 </div>
 
 
@@ -3054,6 +3441,18 @@ Andhra Pradesh – 517501
 <div class="map-frame">
 
 
+<!--
+=========================================================
+MAP DISPLAY
+
+Exact NTS coordinates:
+13.621895, 79.418753
+
+These coordinates are used only for displaying
+the exact map location.
+=========================================================
+-->
+
 <iframe
 
 src="https://www.google.com/maps?q=13.621895,79.418753&z=19&output=embed"
@@ -3064,15 +3463,26 @@ allowfullscreen
 
 referrerpolicy="no-referrer-when-downgrade"
 
-title="NTS Surveillance Technologies Location"
+title="NTS Surveillance Technologies Exact Location"
 
 >
 </iframe>
 
 
+<!--
+=========================================================
+NAVIGATE BUTTON
+
+IMPORTANT:
+This is the EXACT Google Maps share link supplied
+by the user.
+
+=========================================================
+-->
+
 <a
 
-href="https://www.google.com/maps/dir/?api=1&destination=13.621895,79.418753"
+href="https://share.google/eBkPCisxxYYFQzgDc"
 
 target="_blank"
 
@@ -3080,7 +3490,7 @@ rel="noopener noreferrer"
 
 class="map-navigate"
 
-aria-label="Navigate to NTS Surveillance Technologies"
+aria-label="Open NTS Surveillance Technologies on Google Maps"
 
 >
 
